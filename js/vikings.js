@@ -22,7 +22,10 @@ var Pit = function(turn, damage){
 
 // Saxons
 
-
+var Saxons = function(health, strength){
+	this.health = health;
+	this.strength = strength;
+}
 
 
 
