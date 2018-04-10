@@ -11,9 +11,13 @@ var Rolo = new Vikings ('Rolo', 80, 50)
 
 // Vikings Pit
 
-var Pit = function(turn, damage){
-	this.turn = turn;
-	this.damage = damage;
+var Pit = {
+
+}
+
+var pitFight = function(viking1,viking2){
+	return viking1.health - viking2.strength
+	return viking2.health - viking1.strength
 }
 
 
