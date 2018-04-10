@@ -16,8 +16,12 @@ var Pit = {
 }
 
 var pitFight = function(viking1,viking2){
-	return viking1.health - viking2.strength
-	return viking2.health - viking1.strength
+	while(viking1.health >= 5 && viking2.health >= 5){
+		new viking2Health = viking2.health - viking1.strength;
+		new viking1Health = viking1.health - viking2.strength;
+	}
+	// return viking1.health - viking2.strength
+	// return viking2.health - viking1.strength
 }
 
 
