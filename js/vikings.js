@@ -6,29 +6,43 @@ var Vikings = function(name, health, strength){
 }
 
 
-var vk1 = new Vikings('Ragnar', 99, 60)
-var vk2 = new Vikings ('Rolo', 80, 50)
-
 
 // Vikings Pit
 
-var Pit= function(vk1, vk2){
-	this.turns = turn;
-	this.player1 = vk1;
-	this.player2 = vk2;
-	this.fight = function(vk1, vk2, turns){
-		while(vk2.health > vk1.strength && vk1.health > vk2.strength ){
-			vk2.health -= vk1.strength;
-			vk1.health -= vk2.strength; 
-		}
-	};
-	winner : if(vk1.health < vk2.health){
-			console.log('The ' + vk2 + ' is he winner!!');
-		} else{
-			console.log('The ' + vk1 + ' is he winner!!')
-		}
+var PitRing = function(vk1, vk2){
+	this.turns = 5;
+	this.vk1 = vk1;
+	this.vk2 = vk2;
 	
 };
+
+PitRing.prototype.fight = function(){
+		while(this.vk2.health > this.vk1.strength && this.vk1.health > this.vk2.strength ){
+			this.vk2.health -= this.vk1.strength;
+			console.log('The viking ' + ' with the name of ' + this.vk1.name + ' make a hit of '+ this.vk1.strength + 
+				' and health of ' + this.vk1.health);
+			this.vk1.health -= this.vk2.strength; 
+			console.log('The viking ' + ' with the name of ' + this.vk2.name + ' make a hit of '+ this.vk2.strength + 
+				' and health of ' + this.vk2.health);
+
+			this.turns --;
+		}
+	};
+	
+	PitRing.prototype.winner = function() { 
+			if(this.vk1.health < this.vk2.health){
+				console.log(vk2.name + ' is the winner!!');
+			} else{
+				console.log(vk1.name + ' is the winner!!');
+			}
+		};
+
+var vk1 = new Vikings('Ragnar', 99, 20);
+var vk2 = new Vikings ('Rolo', 80, 15);
+
+var pit = new PitRing(vk1, vk2);
+pit.fight();
+pit.winner();
 
 
 
