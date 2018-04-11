@@ -89,6 +89,9 @@ var BattleRoyale = function(vikingArmy, saxonArmy){
 	//this.rounds = rounds; 
 }
 
+
+
+
 BattleRoyale.prototype.BattleArena = function(){
 	console.log('THE BATTLE BEGINS!!');
 	console.log('The vikings runs shouting : VAMONOOOH!');
@@ -102,7 +105,10 @@ BattleRoyale.prototype.BattleArena = function(){
 
 		this.rounds --;
 	}
-}
+};
+
+var battle = new BattleRoyale(vikingArmy, saxonArmy);
+battle.BattleArena();
 // 	if(this.viking.health <= 0){
 
 // 	}
