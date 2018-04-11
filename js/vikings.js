@@ -20,8 +20,8 @@ var PitRing = function(vk1, vk2){
 
 };
 
-	var VikingRandom = Math.floor((Math.random() * 50) + 1);
-	var vikingsArmy = [];
+	//var VikingRandom = Math.floor((Math.random() * 50) + 1);
+	var vikingArmy = [];
 	var vikingsNumber = Math.floor((Math.random() * 80) + 10);
 	var vikingsDead = [];
 	// var name, health, strength;
@@ -29,7 +29,7 @@ var PitRing = function(vk1, vk2){
 
 	for(var i= 0; i <= vikingsNumber; i++){
 		
-		vikingsArmy.push(new Viking()); 
+		vikingArmy.push(new Viking()); 
 		// vikings.push(Viking);
 
 	}
@@ -71,12 +71,12 @@ var Saxon = function(health, strength){
 	this.strength = Math.floor((Math.random() * 10 ) + 5);
 };
 
-var saxonsArmy = [];
+var saxonArmy = [];
 var SaxonsNumber = Math.floor((Math.random() * 80) + 10);
 var saxonsDead = []; 
 
 for(var i = 0; i - SaxonsNumber; i++) {
-	saxonsArmy.push(new Saxon());
+	saxonArmy.push(new Saxon());
 }
 
 
